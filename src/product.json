@@ -1,0 +1,68 @@
+{
+    "products": [
+      {
+        "name": "Black Cap",
+        "type": "Cap",
+        "color": "Black",
+        "sizes": ["S", "M", "L", "XL"],
+        "quantity": 1,
+        "description": "Classic black cap for a sleek look."
+      },
+      {
+        "name": "White Cap",
+        "type": "Cap",
+        "color": "White",
+        "sizes": ["S", "M", "L", "XL"],
+        "quantity": 1,
+        "description": "Simple white cap for a clean style."
+      },
+      {
+        "name": "Denim Pant",
+        "type": "Pant",
+        "color": "Denim",
+        "sizes": ["S", "M", "L", "XL"],
+        "quantity": 1,
+        "description": "Stylish denim pants for a casual outfit."
+      },
+      {
+        "name": "Cargo Pant",
+        "type": "Pant",
+        "color": "Cargo",
+        "sizes": ["S", "M", "L", "XL"],
+        "quantity": 1,
+        "description": "Functional cargo pants for outdoor adventures."
+      },
+      {
+        "name": "Colored Hoodie",
+        "type": "Hoodie",
+        "color": "Colored",
+        "sizes": ["S", "M", "L", "XL"],
+        "quantity": 1,
+        "description": "Vibrant colored hoodie for a bold statement."
+      },
+      {
+        "name": "White Hoodie",
+        "type": "Hoodie",
+        "color": "White",
+        "sizes": ["S", "M", "L", "XL"],
+        "quantity": 1,
+        "description": "Classic white hoodie for everyday comfort."
+      },
+      {
+        "name": "White Sneaker",
+        "type": "Sneaker",
+        "color": "White",
+        "sizes": ["S", "M", "L", "XL"],
+        "quantity": 1,
+        "description": "Clean white sneakers for versatile styling."
+      },
+      {
+        "name": "Colored Sneaker",
+        "type": "Sneaker",
+        "color": "Colored",
+        "sizes": ["S", "M", "L", "XL"],
+        "quantity": 1,
+        "description": "Bright colored sneakers to add a pop of color."
+      }
+    ]
+  }
