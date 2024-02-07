@@ -6,7 +6,8 @@
         "color": "Black",
         "sizes": ["S", "M", "L", "XL"],
         "quantity": 1,
-        "description": "Classic black cap for a sleek look."
+        "description": "Classic black cap for a sleek look.",
+        "image": "./images/black-cap.png"
       },
       {
         "name": "White Cap",
@@ -14,7 +15,8 @@
         "color": "White",
         "sizes": ["S", "M", "L", "XL"],
         "quantity": 1,
-        "description": "Simple white cap for a clean style."
+        "description": "Simple white cap for a clean style.",
+        "image": "./images/white-cap.png"
       },
       {
         "name": "Denim Pant",
@@ -22,7 +24,8 @@
         "color": "Denim",
         "sizes": ["S", "M", "L", "XL"],
         "quantity": 1,
-        "description": "Stylish denim pants for a casual outfit."
+        "description": "Stylish denim pants for a casual outfit.",
+        "image": "./images/denim-pant.png"
       },
       {
         "name": "Cargo Pant",
@@ -30,7 +33,8 @@
         "color": "Cargo",
         "sizes": ["S", "M", "L", "XL"],
         "quantity": 1,
-        "description": "Functional cargo pants for outdoor adventures."
+        "description": "Functional cargo pants for outdoor adventures.",
+        "image": "./images/cargo-pant.png"
       },
       {
         "name": "Colored Hoodie",
@@ -38,7 +42,8 @@
         "color": "Colored",
         "sizes": ["S", "M", "L", "XL"],
         "quantity": 1,
-        "description": "Vibrant colored hoodie for a bold statement."
+        "description": "Vibrant colored hoodie for a bold statement.",
+        "image": "./images/colored-hoodie.png"
       },
       {
         "name": "White Hoodie",
@@ -46,7 +51,8 @@
         "color": "White",
         "sizes": ["S", "M", "L", "XL"],
         "quantity": 1,
-        "description": "Classic white hoodie for everyday comfort."
+        "description": "Classic white hoodie for everyday comfort.",
+        "image": "./images/white-hoodie.png"
       },
       {
         "name": "White Sneaker",
@@ -54,7 +60,9 @@
         "color": "White",
         "sizes": ["S", "M", "L", "XL"],
         "quantity": 1,
-        "description": "Clean white sneakers for versatile styling."
+        "description": "Clean white sneakers for versatile styling.",
+        "image": "./images/white-sneaker.png"
+
       },
       {
         "name": "Colored Sneaker",
@@ -62,7 +70,8 @@
         "color": "Colored",
         "sizes": ["S", "M", "L", "XL"],
         "quantity": 1,
-        "description": "Bright colored sneakers to add a pop of color."
+        "description": "Bright colored sneakers to add a pop of color.",
+        "image": "./images/colored-sneaker.png"
       }
     ]
   }

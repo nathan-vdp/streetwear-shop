@@ -3,3 +3,21 @@
         margin-left: 80px;
     }
 }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Bento grid system */
+  .bento-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .bento-column {
+    flex: 1; /* Each column takes equal width */
+    padding: 20px;
+    border: 1px solid #ddd; /* Optional border for visualization */
+  }
