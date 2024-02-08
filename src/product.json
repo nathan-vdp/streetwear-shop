@@ -7,7 +7,8 @@
         "sizes": ["S", "M", "L", "XL"],
         "quantity": 1,
         "description": "Classic black cap for a sleek look.",
-        "image": "/images/black-cap.png"
+        "image": "./images/black-cap.png",
+        "price": 20
       },
       {
         "name": "White Cap",
@@ -16,7 +17,8 @@
         "sizes": ["S", "M", "L", "XL"],
         "quantity": 1,
         "description": "Simple white cap for a clean style.",
-        "image": "./images/white-cap.png"
+        "image": "./images/white-cap.png",
+        "price": 20
       },
       {
         "name": "Denim Pant",
@@ -25,7 +27,8 @@
         "sizes": ["S", "M", "L", "XL"],
         "quantity": 1,
         "description": "Stylish denim pants for a casual outfit.",
-        "image": "./images/denim-pant.png"
+        "image": "./images/denim-pant.png",
+        "price": 50
       },
       {
         "name": "Cargo Pant",
@@ -34,7 +37,8 @@
         "sizes": ["S", "M", "L", "XL"],
         "quantity": 1,
         "description": "Functional cargo pants for outdoor adventures.",
-        "image": "./images/cargo-pant.png"
+        "image": "./images/cargo-pant.png",
+        "price": 50
       },
       {
         "name": "Colored Hoodie",
@@ -43,7 +47,8 @@
         "sizes": ["S", "M", "L", "XL"],
         "quantity": 1,
         "description": "Vibrant colored hoodie for a bold statement.",
-        "image": "./images/colored-hoodie.png"
+        "image": "./images/colored-hoodie.png",
+        "price": 40
       },
       {
         "name": "White Hoodie",
@@ -52,7 +57,8 @@
         "sizes": ["S", "M", "L", "XL"],
         "quantity": 1,
         "description": "Classic white hoodie for everyday comfort.",
-        "image": "./images/white-hoodie.png"
+        "image": "./images/white-hoodie.png",
+        "price": 40
       },
       {
         "name": "White Sneaker",
@@ -61,7 +67,8 @@
         "sizes": ["S", "M", "L", "XL"],
         "quantity": 1,
         "description": "Clean white sneakers for versatile styling.",
-        "image": "./images/white-sneaker.png"
+        "image": "./images/white-sneaker.png",
+        "price": 60
 
       },
       {
@@ -71,7 +78,8 @@
         "sizes": ["S", "M", "L", "XL"],
         "quantity": 1,
         "description": "Bright colored sneakers to add a pop of color.",
-        "image": "./images/colored-sneaker.png"
+        "image": "./images/colored-sneaker.png",
+        "price": 60
       }
     ]
   }

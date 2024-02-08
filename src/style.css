@@ -10,14 +10,21 @@
     padding: 0;
   }
 
-  /* Bento grid system */
-  .bento-row {
-    display: flex;
-    flex-wrap: wrap;
-  }
+#product-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin: 100px;
+}
 
-  .bento-column {
-    flex: 1; /* Each column takes equal width */
-    padding: 20px;
-    border: 1px solid #ddd; /* Optional border for visualization */
+@media screen and (max-width: 400px) {
+  #product-cards {
+    grid-template-columns: repeat(1, 1fr);
   }
+}
+
+@media screen and (max-width: 600px) {
+  #product-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
