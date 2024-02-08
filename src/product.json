@@ -7,7 +7,7 @@
         "sizes": ["S", "M", "L", "XL"],
         "quantity": 1,
         "description": "Classic black cap for a sleek look.",
-        "image": "./images/black-cap.png"
+        "image": "/images/black-cap.png"
       },
       {
         "name": "White Cap",
