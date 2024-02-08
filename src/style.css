@@ -1,20 +1,20 @@
 .itemOverview {
-    @media screen and (max-width: 600px) {
-        margin-left: 80px;
-    }
+  @media screen and (max-width: 600px) {
+    margin-left: 80px;
+  }
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 #product-cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    margin: 100px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin: 100px;
 }
 
 @media screen and (max-width: 400px) {
@@ -31,4 +31,8 @@
 
 .rounded {
   border-radius: 13%;
+}
+
+#navbar ul li a.active {
+  color: #60a5fa;
 }

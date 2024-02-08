@@ -53,7 +53,7 @@ function createProductCard(product) {
     priceContainer.appendChild(price);
     const addToCartLink = document.createElement('a');
     addToCartLink.href = '#';
-    addToCartLink.classList.add('text-white', 'bg-blue-700', 'hover:bg-blue-800', 'focus:ring-4', 'focus:outline-none', 'focus:ring-blue-300', 'font-medium', 'rounded-lg', 'text-sm', 'px-5', 'py-2.5', 'text-center', 'dark:bg-blue-600', 'dark:hover:bg-blue-700', 'dark:focus:ring-blue-800');
+    addToCartLink.classList.add('text-white', 'bg-grey-500', 'hover:bg-blue-800', 'focus:ring-4', 'focus:outline-none', 'focus:ring-blue-300', 'font-medium', 'rounded-lg', 'text-sm', 'px-5', 'py-2.5', 'text-center', 'dark:bg-blue-600', 'dark:hover:bg-blue-700', 'dark:focus:ring-blue-800');
     addToCartLink.textContent = 'Add to cart';
     priceContainer.appendChild(addToCartLink);
     textContainer.appendChild(priceContainer);
@@ -62,3 +62,22 @@ function createProductCard(product) {
 
     return card;
 }
+
+const navLinks = document.querySelectorAll('#navbar ul li a');
+
+navLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent the default action
+
+        // Remove active class from all links
+        navLinks.forEach(function(link) {
+            link.classList.remove('active');
+        });
+
+        // Add active class to clicked link
+        this.classList.add('active');
+
+        // Change the window location manually
+        window.location = this.href;
+    });
+});
