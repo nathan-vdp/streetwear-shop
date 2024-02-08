@@ -27,7 +27,7 @@
         "sizes": ["S", "M", "L", "XL"],
         "quantity": 1,
         "description": "Stylish denim pants for a casual outfit.",
-        "image": "./images/denim-pant.png",
+        "image": "./images/denim-pants.png",
         "price": 50
       },
       {

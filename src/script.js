@@ -24,24 +24,23 @@ fetch('product.json')
 // Function to create a product card element
 function createProductCard(product) {
     const card = document.createElement('div');
-    card.classList.add('w-full', 'max-w-sm', 'bg-white', 'border', 'border-gray-200', 'rounded-lg', 'shadow', 'dark:bg-gray-800', 'dark:border-gray-700');
+    card.classList.add('w-full', 'max-w-sm');
 
     const imgLink = document.createElement('a');
-    imgLink.href = './images/' + product.imgSrc;
-    const img = document.createElement('img');
-    img.classList.add('p-8', 'rounded-t-lg');
-    img.src = './images/' + product.imgSrc;
+    imgLink.href = product.image;
+    const img = document.createElement('img',);
+    img.classList.add('p-8', 'rounded');
+    img.src = product.image;
     img.alt = 'product image';
     imgLink.appendChild(img);
     card.appendChild(imgLink);
-
     const textContainer = document.createElement('div');
     textContainer.classList.add('px-5', 'pb-5');
 
     const nameLink = document.createElement('a');
     nameLink.href = '#';
     const name = document.createElement('h5');
-    name.classList.add('text-xl', 'font-semibold', 'tracking-tight', 'text-gray-900', 'dark:text-white');
+    name.classList.add('text-xl', 'font-bold', 'tracking-tight', 'text-slate-800', 'dark:text-black');
     name.textContent = product.name;
     nameLink.appendChild(name);
     textContainer.appendChild(nameLink);
@@ -49,7 +48,7 @@ function createProductCard(product) {
     const priceContainer = document.createElement('div');
     priceContainer.classList.add('flex', 'items-center', 'justify-between');
     const price = document.createElement('span');
-    price.classList.add('text-3xl', 'font-bold', 'text-gray-900', 'dark:text-white');
+    price.classList.add('text-3xl', 'font-bold', 'text-slate-600', 'dark:text-black');
     price.textContent = '$' + product.price;
     priceContainer.appendChild(price);
     const addToCartLink = document.createElement('a');
