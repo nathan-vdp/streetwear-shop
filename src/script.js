@@ -81,3 +81,11 @@ navLinks.forEach(function(link) {
         window.location = this.href;
     });
 });
+
+var typed = new Typed('.typed', {
+    strings: ['clothing', 'streetwear'],
+    typeSpeed: 100,
+    backSpeed: 100,
+    loop: false,
+    showCursor: false,
+});
