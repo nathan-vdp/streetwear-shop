@@ -8,13 +8,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  
+
 }
 
 #product-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  gap: 10px;
 }
 
 @media screen and (max-width: 600px) {
