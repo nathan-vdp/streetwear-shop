@@ -83,7 +83,7 @@ navLinks.forEach(function(link) {
 });
 
 var typed = new Typed('.typed', {
-    strings: ['clothing', 'streetwear'],
+    strings: ['Clothing', 'Techwear'],
     typeSpeed: 100,
     backSpeed: 100,
     loop: false,
