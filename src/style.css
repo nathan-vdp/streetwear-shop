@@ -11,6 +11,10 @@
 
 }
 
+.techwear {
+  color: #3b82f6;
+}
+
 #product-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
