@@ -67,17 +67,14 @@ const navLinks = document.querySelectorAll('#navbar ul li a');
 
 navLinks.forEach(function(link) {
     link.addEventListener('click', function(e) {
-        e.preventDefault(); // Prevent the default action
+        e.preventDefault();
 
-        // Remove active class from all links
         navLinks.forEach(function(link) {
             link.classList.remove('active');
         });
 
-        // Add active class to clicked link
         this.classList.add('active');
 
-        // Change the window location manually
         window.location = this.href;
     });
 });
