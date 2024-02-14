@@ -22,54 +22,84 @@ fetch('product.json')
 
 
 // Function to create a product card element
-function createProductCard(product) {
-    const card = document.createElement('div');
-    card.classList.add('w-full', 'max-w-sm');
-
+function createImageElement(product) {
     const imgLink = document.createElement('a');
     imgLink.href = product.image;
-    const img = document.createElement('img',);
+    const img = document.createElement('img');
     img.classList.add('p-8', 'rounded');
     img.src = product.image;
     img.alt = 'product image';
     imgLink.appendChild(img);
-    card.appendChild(imgLink);
-    const textContainer = document.createElement('div');
-    textContainer.classList.add('px-5', 'pb-5');
+    return imgLink;
+}
 
+function createNameElement(product) {
     const nameLink = document.createElement('a');
     nameLink.href = '#';
     const name = document.createElement('h5');
     name.classList.add('text-xl', 'font-bold', 'tracking-tight', 'text-slate-800', 'dark:text-black');
     name.textContent = product.name;
     nameLink.appendChild(name);
-    textContainer.appendChild(nameLink);
+    return nameLink;
+}
 
-    const priceContainer = document.createElement('div');
-    priceContainer.classList.add('flex', 'items-center', 'justify-between');
+function createPriceElement(product) {
     const price = document.createElement('span');
     price.classList.add('text-3xl', 'font-bold', 'text-slate-600', 'dark:text-black');
     price.textContent = '$' + product.price;
-    priceContainer.appendChild(price);
+    return price;
+}
+
+function createAddToCartElement() {
     const addToCartLink = document.createElement('a');
     addToCartLink.href = '#';
     addToCartLink.classList.add('text-white', 'bg-grey-500', 'hover:bg-blue-800', 'focus:ring-4', 'focus:outline-none', 'focus:ring-blue-300', 'font-medium', 'rounded-lg', 'text-sm', 'px-5', 'py-2.5', 'text-center', 'dark:bg-blue-600', 'dark:hover:bg-blue-700', 'dark:focus:ring-blue-800');
     addToCartLink.textContent = 'Add to cart';
-    priceContainer.appendChild(addToCartLink);
+    return addToCartLink;
+}
+
+function createDescriptionElement(product) {
+    const description = document.createElement('div');
+    description.classList.add('absolute', 'inset-0', 'bg-white', 'flex', 'items-center', 'justify-center', 'opacity-0', 'group-hover:opacity-100', 'transition-opacity', 'duration-200');
+    description.textContent = product.description;
+    return description;
+}
+
+function createProductCard(product) {
+    const card = document.createElement('div');
+    card.classList.add('w-full', 'max-w-sm', 'relative', 'group');
+
+    card.appendChild(createImageElement(product));
+
+    const textContainer = document.createElement('div');
+    textContainer.classList.add('px-5', 'pb-5');
+
+    textContainer.appendChild(createNameElement(product));
+
+    const priceContainer = document.createElement('div');
+    priceContainer.classList.add('flex', 'items-center', 'justify-between');
+
+    priceContainer.appendChild(createPriceElement(product));
+    priceContainer.appendChild(createAddToCartElement());
+
     textContainer.appendChild(priceContainer);
+
+    card.appendChild(createDescriptionElement(product));
 
     card.appendChild(textContainer);
 
     return card;
 }
 
+
+
 const navLinks = document.querySelectorAll('#navbar ul li a');
 
-navLinks.forEach(function(link) {
-    link.addEventListener('click', function(e) {
+navLinks.forEach(function (link) {
+    link.addEventListener('click', function (e) {
         e.preventDefault();
 
-        navLinks.forEach(function(link) {
+        navLinks.forEach(function (link) {
             link.classList.remove('active');
         });
 
