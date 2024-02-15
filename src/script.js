@@ -60,7 +60,7 @@ function createAddToCartElement() {
 
 function createDescriptionElement(product) {
     const description = document.createElement('div');
-    description.classList.add('absolute', 'inset-0', 'bg-white', 'flex', 'items-center', 'justify-center', 'opacity-0', 'group-hover:opacity-100', 'transition-opacity', 'duration-200');
+    description.classList.add('absolute', 'inset-0', 'bg-white', 'flex', 'items-center', 'justify-center', 'opacity-0', 'group-hover:opacity-100', 'transition-opacity', 'duration-200', "font-semibold");
     description.textContent = product.description;
     return description;
 }
