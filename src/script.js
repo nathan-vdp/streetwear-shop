@@ -131,6 +131,7 @@ navLinks.forEach(function (link) {
     });
 });
 
+// Typed.js
 var typed = new Typed('.typed', {
     strings: ['Clothing', 'Techwear'],
     typeSpeed: 100,
