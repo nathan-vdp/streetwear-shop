@@ -131,6 +131,34 @@ navLinks.forEach(function (link) {
     });
 });
 
+// Functie om producten te filteren en weer te geven
+function filterProducts(products) {
+    const selectedType = filterType.value;
+
+    const filteredProducts = products.filter(product => {
+        const matchesType = selectedType === 'all' || product.type === selectedType;
+        return matchesType;
+    });
+
+    // Weergeef de gefilterde producten
+    displayProducts(filteredProducts);
+}
+
+// Functie om producten weer te geven
+function displayProducts(products) {
+    // Leeg de container voordat je nieuwe producten toevoegt
+    productContainer.innerHTML = '';
+
+    // Voeg elk product toe aan de container
+    products.forEach(product => {
+        const productCard = createProductCard(product);
+        productContainer.appendChild(productCard);
+    });
+}
+
+// Voeg een event listener toe aan de select elementen
+filterType.addEventListener('change', () => filterProducts(products));
+
 // Typed.js
 var typed = new Typed('.typed', {
     strings: ['Clothing', 'Techwear'],
