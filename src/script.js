@@ -161,12 +161,3 @@ function displayProducts(products) {
 
 // Voeg een event listener toe aan de select elementen
 filterType.addEventListener('change', () => filterProducts(products));
-
-// Typed.js
-var typed = new Typed('.typed', {
-    strings: ['Clothing', 'Techwear'],
-    typeSpeed: 100,
-    backSpeed: 100,
-    loop: false,
-    showCursor: false,
-});
