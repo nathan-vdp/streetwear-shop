@@ -13,7 +13,6 @@ fetch('product.json')
             data.products.forEach(product => {
                 const productCard = createProductCard(product);
                 productCardsContainer.appendChild(productCard);
-                filterType.addEventListener('change', () => filterProducts(product));
             });
         } else {
             throw new Error('Fetched data does not contain the "products" array');
