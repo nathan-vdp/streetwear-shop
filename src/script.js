@@ -13,6 +13,7 @@ fetch('product.json')
             data.products.forEach(product => {
                 const productCard = createProductCard(product);
                 productCardsContainer.appendChild(productCard);
+                filterType.addEventListener('change', () => filterProducts(product));
             });
         } else {
             throw new Error('Fetched data does not contain the "products" array');
@@ -112,8 +113,6 @@ function createAddToCartElement(product) {
     });
     return addToCartLink;
 }
-
-
 
 const navLinks = document.querySelectorAll('#navbar ul li a');
 
