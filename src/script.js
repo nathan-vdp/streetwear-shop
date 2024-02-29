@@ -73,6 +73,8 @@ function createDescriptionElement(product) {
 function createProductCard(product) {
     const card = document.createElement('div');
     card.classList.add('w-full', 'max-w-sm', 'relative', 'group');
+    card.id = `product-${product.name.replace(/ /g, '-')}`;
+    card.classList.add('product-card');
 
     const imageContainer = document.createElement('div');
     imageContainer.classList.add('relative');
@@ -139,25 +141,29 @@ function filterProducts(products) {
     const selectedType = filterType.value;
 
     const filteredProducts = products.filter(product => {
-        const matchesType = selectedType === 'all' || product.type === selectedType;
-        return matchesType;
+        return selectedType === 'all' || product.type === selectedType;
     });
 
-    // Weergeef de gefilterde producten
-    displayProducts(filteredProducts);
+    // Weergeef alleen de gefilterde producten
+    displayFilteredProducts(filteredProducts);
 }
 
-// Functie om producten weer te geven
-function displayProducts(products) {
-    // Leeg de container voordat je nieuwe producten toevoegt
-    productContainer.innerHTML = '';
+// Functie om alleen gefilterde producten weer te geven
+function displayFilteredProducts(filteredProducts) {
+    // Verberg alle productkaarten
+    const allProductCards = document.querySelectorAll('.product-card');
+    allProductCards.forEach(card => {
+        card.style.display = 'none';
+    });
 
-    // Voeg elk product toe aan de container
-    products.forEach(product => {
-        const productCard = createProductCard(product);
-        productContainer.appendChild(productCard);
+    // Weergeef alleen de productkaarten die overeenkomen met de gefilterde producten
+    filteredProducts.forEach(product => {
+        const productCard = document.getElementById(`product-${product.name.replace(/ /g, '-')}`);
+        if (productCard) {
+            productCard.style.display = 'block';
+        }
     });
 }
 
-// Voeg een event listener toe aan de select elementen
+// Voeg een event listener toe aan de select element
 filterType.addEventListener('change', () => filterProducts(products));
