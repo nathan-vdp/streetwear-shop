@@ -43,3 +43,11 @@
 #navbar ul li a.active {
   color: #60a5fa;
 }
+
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
