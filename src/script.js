@@ -115,22 +115,6 @@ function createAddToCartElement(product) {
     return addToCartLink;
 }
 
-const navLinks = document.querySelectorAll('#navbar ul li a');
-
-navLinks.forEach(function (link) {
-    link.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        navLinks.forEach(function (link) {
-            link.classList.remove('active');
-        });
-
-        this.classList.add('active');
-
-        window.location = this.href;
-    });
-});
-
 // Functie om producten te filteren en weer te geven
 function filterProducts(products) {
     const selectedType = filterType.value;
