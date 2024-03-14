@@ -8,12 +8,9 @@ fetch('product.json')
         return response.json();
     })
     .then(data => {
-        // Check if the fetched data contains the "products" array
         if (data.hasOwnProperty('products') && Array.isArray(data.products)) {
-            // Sla de productgegevens op in de variabele
             products = data.products;
 
-            // Create product cards for each product in the "products" array
             const productCardsContainer = document.getElementById('product-cards');
             data.products.forEach(product => {
                 const productCard = createProductCard(product);
@@ -25,8 +22,6 @@ fetch('product.json')
     })
     .catch(error => console.error('Error fetching product data:', error));
 
-
-// Function to create a product card element
 function createImageElement(product) {
     const imgLink = document.createElement('a');
     imgLink.href = product.image;
@@ -144,19 +139,15 @@ function filterProducts(products) {
         return selectedType === 'all' || product.type === selectedType;
     });
 
-    // Weergeef alleen de gefilterde producten
     displayFilteredProducts(filteredProducts);
 }
 
-// Functie om alleen gefilterde producten weer te geven
 function displayFilteredProducts(filteredProducts) {
-    // Verberg alle productkaarten
     const allProductCards = document.querySelectorAll('.product-card');
     allProductCards.forEach(card => {
         card.style.display = 'none';
     });
 
-    // Weergeef alleen de productkaarten die overeenkomen met de gefilterde producten
     filteredProducts.forEach(product => {
         const productCard = document.getElementById(`product-${product.name.replace(/ /g, '-')}`);
         if (productCard) {
@@ -165,5 +156,4 @@ function displayFilteredProducts(filteredProducts) {
     });
 }
 
-// Voeg een event listener toe aan de select element
 filterType.addEventListener('change', () => filterProducts(products));
