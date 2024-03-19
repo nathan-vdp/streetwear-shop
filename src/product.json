@@ -61,12 +61,12 @@
         "price": 40
       },
       {
-        "name": "White Sneaker",
+        "name": "Gray Sneaker",
         "type": "Sneaker",
-        "color": "White",
+        "color": "Gray",
         "sizes": ["S", "M", "L", "XL"],
         "quantity": 1,
-        "description": "Clean white sneakers for versatile styling.",
+        "description": "Clean gray sneakers for versatile styling.",
         "image": "./images/white-sneaker.png",
         "price": 60
 
