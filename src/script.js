@@ -111,6 +111,7 @@ function createAddToCartElement(product) {
     addToCartLink.addEventListener('click', function (event) {
         event.preventDefault();
         addToCart(product);
+        showModal(product);
     });
     return addToCartLink;
 }
@@ -138,6 +139,50 @@ function displayFilteredProducts(filteredProducts) {
             productCard.style.display = 'block';
         }
     });
+}
+
+function showModal(product) {
+    const modal = document.createElement('div');
+    modal.classList.add('modal', 'fixed', 'top-0', 'left-0', 'w-full', 'h-full', 'flex', 'items-center', 'justify-center', 'z-50');
+
+    // Creëer modaal inhoud
+    const modalContent = document.createElement('div');
+    modalContent.classList.add('modal-content', 'bg-white', 'p-8', 'rounded-lg', 'shadow-lg');
+
+    // Voeg inhoud toe aan modaal venster
+    modal.appendChild(modalContent);
+
+    // Creëer dropdown voor maten
+    const sizeDropdown = document.createElement('select');
+    const sizes = product.sizes;
+    sizes.forEach(size => {
+        const option = document.createElement('option');
+        option.value = size;
+        option.textContent = size;
+        sizeDropdown.appendChild(option);
+    });
+
+    modalContent.appendChild(sizeDropdown);
+
+    const addToCartButton = document.createElement('button');
+    addToCartButton.textContent = 'Add to Cart';
+    addToCartButton.classList.add('mt-4', 'px-2', 'py-2', 'ml-3', 'bg-blue-500', 'text-white', 'rounded-md', 'hover:bg-blue-600', 'focus:outline-none', 'focus:ring', 'focus:ring-blue-300');
+    addToCartButton.addEventListener('click', function () {
+        const selectedSize = sizeDropdown.value;
+        // Voeg product toe aan winkelwagen met geselecteerde maat
+        addToCart({ ...product, size: selectedSize });
+        closeModal(modal);
+    });
+
+    // Voeg knop toe aan modaal inhoud
+    modalContent.appendChild(addToCartButton);
+
+    document.body.appendChild(modal);
+}
+
+function closeModal(modal) {
+    // Verwijder modaal venster uit de DOM
+    modal.remove();
 }
 
 filterType.addEventListener('change', () => filterProducts(products));
